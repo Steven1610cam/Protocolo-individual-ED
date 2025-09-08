@@ -37,7 +37,20 @@ public class simuladorDeVentas {
         for (double total : totales) {
             totalGeneral += total;
         }
+        
         System.out.println("\nTotal general de ventas: " + totalGeneral);
+        
+        
+        // Producto más vendido
+        int maxIndex = 0;
+        for (int i = 1; i < cantidades.length; i++) {
+            if (cantidades[i] > cantidades[maxIndex]) {
+                maxIndex = i;
+            }
+        }
+        
+        System.out.println("El producto más vendido fue: " + productos[maxIndex] +
+                           " con " + cantidades[maxIndex] + " unidades.");
         
 
     
