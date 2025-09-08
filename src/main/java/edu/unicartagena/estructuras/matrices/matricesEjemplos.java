@@ -6,6 +6,7 @@ package edu.unicartagena.estructuras.matrices;
  */
 public class matricesEjemplos {
     public static void ejecutar() {
+        System.out.println("\n--- Matrices ---");
         
         
         int matriz[][] = new int[3][3];
