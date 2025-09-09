@@ -16,6 +16,42 @@ public class simuladorDeVentas {
         // Ventas
         int cantidades[] = {10, 5, 2, 5, 12};
         
+        
+        
+        
+        // Total por producto
+        double[] totales = new double[productos.length];
+        for (int i = 0; i < productos.length; i++) {
+            totales[i] = precios[i] * cantidades[i];
+        }
+        
+        // Visualizar tabla de ventas
+        System.out.println("Producto\tPrecio\tCantidad\tTotal");
+        for (int i = 0; i < productos.length; i++) {           
+            System.out.println(productos[i] + "\t" + precios[i] + "\t" +
+                               cantidades[i] + "\t\t" + totales[i]);
+        }
+        
+        // Total general
+        double totalGeneral = 0;
+        for (double total : totales) {
+            totalGeneral += total;
+        }
+        
+        System.out.println("\nTotal general de ventas: " + totalGeneral);
+        
+        
+        // Producto más vendido
+        int maxIndex = 0;
+        for (int i = 1; i < cantidades.length; i++) {
+            if (cantidades[i] > cantidades[maxIndex]) {
+                maxIndex = i;
+            }
+        }
+        
+        System.out.println("El producto más vendido fue: " + productos[maxIndex] +
+                           " con " + cantidades[maxIndex] + " unidades.");
+        
 
     
     }
