@@ -10,7 +10,7 @@ public class simuladorDeVentas {
         
         
         // Productos
-        String productos[] = {"BolloLimpio", "Suero", "Queso", "Yuca", "Chicha"};
+        String productos[] = {"Bollo", "Suero", "Queso", "Yuca", "Chicha"};
         // Precios correspondientes
         double precios[] = {1000, 2500, 25000, 2500, 1500};
         // Ventas
@@ -26,11 +26,14 @@ public class simuladorDeVentas {
         }
         
         // Visualizar tabla de ventas
-        System.out.println("Producto\tPrecio\tCantidad\tTotal");
-        for (int i = 0; i < productos.length; i++) {           
-            System.out.println(productos[i] + "\t" + precios[i] + "\t" +
-                               cantidades[i] + "\t\t" + totales[i]);
+        // Mejora visual: uso de printf en vez de "println" para alinear columnas en la tabla de ventas.
+        System.out.printf("%-10s %10s %10s %10s%n", "Producto", "Precio", "Cantidad", "Total");
+            for (int i = 0; i < productos.length; i++) {
+            System.out.printf("%-10s %10.1f %10d %10.1f%n",
+                      productos[i], precios[i], cantidades[i], totales[i]);
         }
+
+
         
         // Total general
         double totalGeneral = 0;

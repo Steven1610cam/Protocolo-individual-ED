@@ -24,35 +24,13 @@ public class arregloEjemplos {
         System.out.println("Recorido con for clasico");
         
         for(int i = 0; i < numeros.length; i++) {
-            System.out.println(numeros[i] + "");
+            System.out.print(numeros[i] + " ");
         
         }
+        System.out.println();
         
         //for-each
         System.out.println("Recorrido con for-each:");
-        for (int num : numeros) {
-            System.out.print(num + " ");
-        }
-        System.out.println();
-        
-        // 3.	Modificación
-        // cambiar valores impares por 0
-        for (int i = 0; i < numeros.length; i++) {
-            if (numeros[i] % 2 != 0) {
-                numeros[i] = 0;
-            }
-        }
-        System.out.println("Arreglo con impares cambiados a 0:");
-        for (int num : numeros) {
-            System.out.print(num + " ");
-        }
-        System.out.println();
-        
-        //multiplicar valores por su índice
-        for (int i = 0; i < numeros.length; i++) {
-            numeros[i] = numeros[i] * i;
-        }
-        System.out.println("Arreglo después de multiplicar cada valor por su índice:");
         for (int num : numeros) {
             System.out.print(num + " ");
         }
@@ -78,8 +56,30 @@ public class arregloEjemplos {
         } else {
             System.out.println("El valor " + valorBuscado + " no se encuentra en el arreglo.");
         }
-
         
+        // 3.	Modificación
+        // cambiar valores impares por 0
+        for (int i = 0; i < numeros.length; i++) {
+            if (numeros[i] % 2 != 0) {
+                numeros[i] = 0;
+            }
+        }
+        System.out.println("Arreglo con impares cambiados a 0:");
+        for (int num : numeros) {
+            System.out.print(num + " ");
+        }
+        System.out.println();
+        
+        //multiplicar valores por su índice
+        for (int i = 0; i < numeros.length; i++) {
+            numeros[i] = numeros[i] * i;
+        }
+        System.out.println("Arreglo después de multiplicar cada valor por su índice:");
+        for (int num : numeros) {
+            System.out.print(num + " ");
+        }
+        System.out.println();
+
         
          
     }
